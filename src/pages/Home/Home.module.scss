@@ -1,0 +1,10 @@
+@import '../../variables';
+
+.cardWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5.5rem;
+  padding: 5.5rem;
+  background-color: $kasaGrey;
+  border-radius: 2.5rem;
+}
