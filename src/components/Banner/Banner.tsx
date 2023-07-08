@@ -1,9 +1,9 @@
 import styles from './Banner.module.scss';
 
-type BannerProps = {
+interface BannerProps {
   image: string;
   text?: string;
-};
+}
 
 const Banner = ({ image, text }: BannerProps) => {
   return (
