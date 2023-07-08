@@ -1,3 +1,4 @@
+import React from 'react';
 import { Logo } from '../Icons/Logo';
 import { COLORS } from '../../constants/colors';
 import styles from './Footer.module.scss';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Navbar from '../Header/Header';
 import Home from '../../pages/Home/Home';

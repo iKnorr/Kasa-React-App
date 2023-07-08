@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import styles from './Layout.module.scss';
 import Navbar from '../Header/Header';
 import Footer from '../Footer/Footer';

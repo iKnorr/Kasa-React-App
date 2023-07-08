@@ -1,3 +1,4 @@
+import React from 'react';
 import Banner from '../../components/Banner/Banner';
 import styles from './Home.module.scss';
 import data from '../../data/data.json';

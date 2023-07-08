@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styles from './Card.module.scss';
-
+import React from 'react';
 interface CardProps {
   title: string;
   src: string;
