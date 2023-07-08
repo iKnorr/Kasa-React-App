@@ -1,0 +1,26 @@
+@import '../../variables';
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.link {
+  font-size: 2.4rem;
+  color: $primary;
+  text-decoration: none;
+
+  &:hover {
+    color: $primary-hover;
+  }
+
+  &:last-of-type {
+    margin-left: 8rem;
+  }
+}
+
+.active {
+  text-decoration: underline;
+}

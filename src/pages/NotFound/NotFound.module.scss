@@ -1,0 +1,27 @@
+@import '../../variables';
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $primary;
+}
+
+.heading {
+  margin: 10rem 0 2rem 0;
+  font-size: 28.8rem;
+  font-weight: 700;
+}
+
+.subHeading {
+  margin: 0 0 22rem 0;
+  font-size: 3.6rem;
+  font-weight: 500;
+}
+
+.link {
+  color: $primary;
+  font-size: 1.8rem;
+  font-weight: 500;
+}

@@ -1,0 +1,16 @@
+@import 'variables';
+
+:root {
+  font-size: $fontSize;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 4rem 10rem 0 10rem;
+  font-family: $fontKasa;
+}
