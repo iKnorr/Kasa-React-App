@@ -1,0 +1,12 @@
+@import '../../variables';
+
+.tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 11.5rem;
+  padding: 0.4rem 3rem;
+  font-size: 1.4rem;
+  background-color: $primary;
+  border-radius: 1rem;
+}

@@ -1,10 +1,10 @@
 import React from 'react';
 
-type LogoProps = {
+interface LogoProps {
   width?: string;
   height?: string;
   color?: string;
-};
+}
 
 export const Logo = ({ width, height, color }: LogoProps) => {
   return (

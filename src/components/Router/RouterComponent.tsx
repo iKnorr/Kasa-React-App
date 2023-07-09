@@ -6,6 +6,7 @@ import About from '../../pages/About/About';
 import NotFound from '../../pages/NotFound/NotFound';
 import Footer from '../Footer/Footer';
 import styles from './RouterComponent.module.scss';
+import Accommodation from '../Accommodation/Accommodation';
 
 const RouterComponent = () => {
   return (
@@ -14,6 +15,7 @@ const RouterComponent = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/accommodation/:id" element={<Accommodation />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

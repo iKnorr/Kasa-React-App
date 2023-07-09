@@ -1,0 +1,68 @@
+@import '../../variables';
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  height: 415px;
+  width: 100%;
+  background-image: linear-gradient(to bottom, $primary, $darkPrimary);
+  border-radius: 2.5rem;
+  color: $secondary;
+}
+
+.infoSectionContainer {
+  width: 100%;
+  margin: 3rem 0 3rem 0;
+  color: $primary;
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-size: 3.6rem;
+  font-weight: 500;
+}
+
+.location {
+  font-size: 1.8rem;
+}
+
+.tags {
+  display: flex;
+  gap: 1rem;
+  margin: 3rem 0 0 0;
+  color: $secondary;
+}
+
+.UserProfileRatingContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.UserAvatarNameContainer {
+  display: flex;
+  justify-content: space-between;
+
+  .name {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+  }
+
+  .avatar {
+    margin-left: 1rem;
+    width: 6.4rem;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 50%;
+  }
+}
+
+.ratingTagsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}

@@ -4,11 +4,12 @@ import React from 'react';
 interface CardProps {
   title: string;
   src: string;
+  id: string;
 }
 
-const Card = ({ title, src }: CardProps) => {
+const Card = ({ title, src, id }: CardProps) => {
   return (
-    <Link to="/" className={styles.link}>
+    <Link to={`/accommodation/${id}`} className={styles.link}>
       <div className={styles.wrapper}>
         <img src={src} alt={title} />
         <p>{title}</p>

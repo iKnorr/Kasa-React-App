@@ -13,8 +13,13 @@ const Home = () => {
         text="Chez vous, partout et ailleurs"
       />
       <section className={styles.cardWrapper}>
-        {data?.map(({ title, pictures }) => (
-          <Card title={title} src={pictures[0]} />
+        {data?.map(({ id, title, pictures }) => (
+          <Card
+            key={`${id}-${title}`}
+            id={id}
+            title={title}
+            src={pictures[0]}
+          />
         ))}
       </section>
     </main>
