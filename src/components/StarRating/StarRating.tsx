@@ -22,7 +22,9 @@ const StarRating = ({ rating }: RatingProps) => {
   return (
     <div style={{ display: 'flex' }}>
       {stars.map(star => (
-        <div style={{ margin: '0 0.7rem' }}>{star}</div>
+        <div key={`${star}-${rating}`} style={{ margin: '0 0.7rem' }}>
+          {star}
+        </div>
       ))}
     </div>
   );

@@ -35,7 +35,9 @@ const Accommodation = () => {
           <div className={styles.UserAvatarNameContainer}>
             <div>
               {host.name.split(' ').map(n => (
-                <p className={styles.name}>{n}</p>
+                <p key={`${id}-${n}`} className={styles.name}>
+                  {n}
+                </p>
               ))}
             </div>
             <div className={styles.avatar}>
@@ -45,8 +47,8 @@ const Accommodation = () => {
         </div>
         <div className={styles.ratingTagsContainer}>
           <div className={styles.tags}>
-            {tags?.map((tagTitle, index) => (
-              <Tag key={`${index}-${tagTitle}`} tagTitle={tagTitle} />
+            {tags?.map(tagTitle => (
+              <Tag key={`${id}-${tagTitle}`} tagTitle={tagTitle} />
             ))}
           </div>
           <StarRating rating={rating} />
