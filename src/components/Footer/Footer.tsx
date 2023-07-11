@@ -1,5 +1,5 @@
 import React from 'react';
-import { Logo } from '../Icons/Logo';
+import { Logo } from '../Icons/Logo/Logo';
 import { COLORS } from '../../constants/colors';
 import styles from './Footer.module.scss';
 

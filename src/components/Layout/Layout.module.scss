@@ -2,6 +2,12 @@
 
 .content {
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
-  min-height: calc(100vh - 4rem);
+  justify-content: space-between;
+  margin: 4rem 10rem 0 10rem;
+
+  @media (max-width: 480px) {
+    margin: 2rem 2rem 0 2rem;
+  }
 }

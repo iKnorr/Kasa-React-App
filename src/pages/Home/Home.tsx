@@ -5,12 +5,12 @@ import data from '../../data/data.json';
 import Card from '../../components/Card/Card';
 
 const Home = () => {
-  console.log(data);
   return (
     <main>
       <Banner
         image="/images/banner.png"
-        text="Chez vous, partout et ailleurs"
+        textLine1="Chez vous,"
+        textLine2="partout et ailleurs"
       />
       <section className={styles.cardWrapper}>
         {data?.map(({ id, title, pictures }) => (

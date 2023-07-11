@@ -1,0 +1,13 @@
+@import '../../../../variables';
+
+.star {
+  width: 2.5rem;
+  height: 2.4rem;
+}
+
+@media (max-width: 480px) {
+  .star {
+    width: 1.35rem;
+    height: 1.3rem;
+  }
+}

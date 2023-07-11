@@ -27,7 +27,36 @@ const Accommodation = () => {
         <h1>Carousel coming soon...</h1>
       </div>
       <section className={styles.infoSectionContainer}>
-        <div className={styles.UserProfileRatingContainer}>
+        <div className={styles.accommodationInfoContainer}>
+          <div className={styles.titleWrapper}>
+            <h1 className={styles.title}>{title}</h1>
+            <span className={styles.location}>{location}</span>
+            <div className={styles.tags}>
+              {tags?.map(tagTitle => (
+                <Tag key={`${id}-${tagTitle}`} tagTitle={tagTitle} />
+              ))}
+            </div>
+          </div>
+          <div className={styles.userProfileRatingContainer}>
+            <div className={styles.ratingTagsContainer}>
+              <StarRating rating={rating} />
+            </div>
+            <div className={styles.userAvatarNameContainer}>
+              <div className={styles.nameWrapper}>
+                {host.name.split(' ').map(n => (
+                  <p key={`${id}-${n}`} className={styles.name}>
+                    {n}
+                  </p>
+                ))}
+              </div>
+              <div className={styles.avatar}>
+                <img src={host.picture} alt={`${host.name}-avatar`} />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* <div className={styles.UserProfileRatingContainer}>
           <div className={styles.titleWrapper}>
             <h1 className={styles.title}>{title}</h1>
             <span className={styles.location}>{location}</span>
@@ -52,7 +81,7 @@ const Accommodation = () => {
             ))}
           </div>
           <StarRating rating={rating} />
-        </div>
+        </div> */}
       </section>
     </>
   );

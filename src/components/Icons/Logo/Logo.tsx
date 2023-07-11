@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Logo.module.scss';
 
 interface LogoProps {
   width?: string;
@@ -9,8 +10,9 @@ interface LogoProps {
 export const Logo = ({ width, height, color }: LogoProps) => {
   return (
     <svg
-      width={width ?? '21.1rem'}
-      height={height ?? '6.8rem'}
+      className={styles.logo}
+      // width={width ?? '21.1rem'}
+      // height={height ?? '6.8rem'}
       viewBox="0 0 211 68"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

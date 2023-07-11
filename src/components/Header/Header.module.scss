@@ -19,6 +19,14 @@
   &:last-of-type {
     margin-left: 8rem;
   }
+
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
+
+    &:last-of-type {
+      margin-left: 2rem;
+    }
+  }
 }
 
 .active {

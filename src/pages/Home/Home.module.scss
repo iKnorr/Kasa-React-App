@@ -7,4 +7,16 @@
   padding: 5.5rem;
   background-color: $kasaGrey;
   border-radius: 2.5rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: unset;
+    background-color: transparent;
+  }
 }

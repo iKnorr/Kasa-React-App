@@ -1,6 +1,6 @@
 import React from 'react';
-import { Star } from '../Icons/Star';
-import { StarInactive } from '../Icons/StarInactive';
+import { Star } from '../Icons/Logo/Stars/Star';
+import { StarInactive } from '../Icons/Logo/Stars/StarInactive';
 
 interface RatingProps {
   rating?: string;
@@ -20,11 +20,9 @@ const StarRating = ({ rating }: RatingProps) => {
   }
 
   return (
-    <div style={{ display: 'flex' }}>
+    <div style={{ display: 'flex', gap: '0.7rem' }}>
       {stars.map(star => (
-        <div key={`${star}-${rating}`} style={{ margin: '0 0.7rem' }}>
-          {star}
-        </div>
+        <div key={`${star}-${rating}`}>{star}</div>
       ))}
     </div>
   );

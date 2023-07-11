@@ -11,7 +11,7 @@ const Card = ({ title, src, id }: CardProps) => {
   return (
     <Link to={`/accommodation/${id}`} className={styles.link}>
       <div className={styles.wrapper}>
-        <img src={src} alt={title} />
+        {/* <img src={src} alt={title} /> */}
         <p>{title}</p>
       </div>
     </Link>

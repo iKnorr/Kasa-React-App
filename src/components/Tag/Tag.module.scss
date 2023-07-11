@@ -10,3 +10,13 @@
   background-color: $primary;
   border-radius: 1rem;
 }
+
+@media (max-width: 480px) {
+  .tag {
+    white-space: nowrap;
+    min-width: 8.4rem;
+    padding: 0.4rem 2rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+  }
+}

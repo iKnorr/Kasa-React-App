@@ -1,0 +1,9 @@
+@import '../../../variables';
+
+.logo {
+  height: 6.8rem;
+
+  @media (max-width: 480px) {
+    height: 4.7rem;
+  }
+}
