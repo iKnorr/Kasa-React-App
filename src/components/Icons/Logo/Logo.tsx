@@ -11,8 +11,8 @@ export const Logo = ({ width, height, color }: LogoProps) => {
   return (
     <svg
       className={styles.logo}
-      // width={width ?? '21.1rem'}
-      // height={height ?? '6.8rem'}
+      width={width}
+      height={height}
       viewBox="0 0 211 68"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

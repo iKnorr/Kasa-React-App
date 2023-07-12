@@ -1,0 +1,11 @@
+@import '../../../variables';
+
+.arrow {
+  height: 1.4rem;
+}
+
+@media (max-width: 480px) {
+  .arrow {
+    height: 0.8rem;
+  }
+}

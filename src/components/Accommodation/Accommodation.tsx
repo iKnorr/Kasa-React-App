@@ -4,6 +4,7 @@ import data from '../../data/data.json';
 import styles from './Accommodation.module.scss';
 import Tag from '../Tag/Tag';
 import StarRating from '../StarRating/StarRating';
+import Dropdown from '../Dropdown/Dropdown';
 
 const Accommodation = () => {
   const { id: idParams } = useParams();
@@ -11,7 +12,6 @@ const Accommodation = () => {
   const {
     id,
     title,
-    cover,
     pictures,
     description,
     host,
@@ -21,8 +21,18 @@ const Accommodation = () => {
     tags,
   } = result[0];
 
+  const equipmentList = () => {
+    return (
+      <ul className={styles.equipmentList}>
+        {equipments.map((e, index) => (
+          <li key={`${index}-${e}`}>{e}</li>
+        ))}
+      </ul>
+    );
+  };
+
   return (
-    <>
+    <div className={styles.accommondationContainer}>
       <div className={styles.carousel}>
         <h1>Carousel coming soon...</h1>
       </div>
@@ -55,35 +65,12 @@ const Accommodation = () => {
             </div>
           </div>
         </div>
-
-        {/* <div className={styles.UserProfileRatingContainer}>
-          <div className={styles.titleWrapper}>
-            <h1 className={styles.title}>{title}</h1>
-            <span className={styles.location}>{location}</span>
-          </div>
-          <div className={styles.UserAvatarNameContainer}>
-            <div>
-              {host.name.split(' ').map(n => (
-                <p key={`${id}-${n}`} className={styles.name}>
-                  {n}
-                </p>
-              ))}
-            </div>
-            <div className={styles.avatar}>
-              <img src={host.picture} alt={`${host.name}-avatar`} />
-            </div>
-          </div>
-        </div>
-        <div className={styles.ratingTagsContainer}>
-          <div className={styles.tags}>
-            {tags?.map(tagTitle => (
-              <Tag key={`${id}-${tagTitle}`} tagTitle={tagTitle} />
-            ))}
-          </div>
-          <StarRating rating={rating} />
-        </div> */}
       </section>
-    </>
+      <div className={styles.dropdownWrapper}>
+        <Dropdown title="Description" content={<p>{description}</p>} />
+        <Dropdown title="Équipements" content={equipmentList()} />
+      </div>
+    </div>
   );
 };
 

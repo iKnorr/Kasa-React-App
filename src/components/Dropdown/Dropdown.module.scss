@@ -1,0 +1,46 @@
+@import '../../variables';
+
+.dropdownContainer {
+  cursor: pointer;
+  width: 58.2rem;
+  margin-bottom: 2rem;
+}
+
+.dropdownTitle {
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5.2rem;
+  padding: 0 2rem;
+  background-color: $primary;
+  color: $secondary;
+  font-size: 1.8rem;
+  border-radius: 1rem;
+}
+
+.dropdownContent {
+  z-index: -1;
+  position: relative;
+  user-select: none;
+  margin: -1rem 0;
+  padding: 4rem 2rem;
+  color: $primary;
+  background-color: $kasaGrey;
+  border-radius: 0 0 1rem 1rem;
+}
+
+@media (max-width: 480px) {
+  .dropdownContainer {
+    width: 100%;
+  }
+
+  .dropdownTitle {
+    height: 3rem;
+    font-size: 1.3rem;
+  }
+
+  .dropdownContent {
+    padding: 3rem 1rem;
+  }
+}
