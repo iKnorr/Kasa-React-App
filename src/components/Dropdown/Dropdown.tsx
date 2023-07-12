@@ -1,14 +1,25 @@
-import React, { useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import styles from './Dropdown.module.scss';
 import { ArrowUp } from '../Icons/Arrow/ArrowUp';
 import { ArrowDown } from '../Icons/Arrow/ArrowDown';
 
 interface DropdownProps {
   title: string;
-  content: string | JSX.Element;
+  children: ReactNode;
+  width?: string;
+  height?: string;
+  fontSize?: string;
+  lineHeight?: string;
 }
 
-const Dropdown = ({ title, content }: DropdownProps) => {
+const Dropdown = ({
+  title,
+  children,
+  width,
+  height,
+  fontSize,
+  lineHeight,
+}: DropdownProps) => {
   const [show, setShow] = useState<boolean>(false);
 
   const handleClick = () => {
@@ -16,12 +27,23 @@ const Dropdown = ({ title, content }: DropdownProps) => {
   };
 
   return (
-    <div className={styles.dropdownContainer} onClick={handleClick}>
+    <div
+      className={styles.dropdownContainer}
+      onClick={handleClick}
+      style={{ width: width, height: height }}
+    >
       <div className={styles.dropdownTitle}>
-        <span>{title}</span>
+        <span style={{ fontSize: fontSize }}>{title}</span>
         {show ? <ArrowUp /> : <ArrowDown />}
       </div>
-      {show && <div className={styles.dropdownContent}>{content}</div>}
+      {show && (
+        <div
+          className={styles.dropdownContent}
+          style={{ fontSize: fontSize, lineHeight: lineHeight }}
+        >
+          {children}
+        </div>
+      )}
     </div>
   );
 };

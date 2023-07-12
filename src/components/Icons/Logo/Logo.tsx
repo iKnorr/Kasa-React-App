@@ -1,11 +1,6 @@
 import React from 'react';
 import styles from './Logo.module.scss';
-
-interface LogoProps {
-  width?: string;
-  height?: string;
-  color?: string;
-}
+import { LogoProps } from '../../../types/icon.types';
 
 export const Logo = ({ width, height, color }: LogoProps) => {
   return (

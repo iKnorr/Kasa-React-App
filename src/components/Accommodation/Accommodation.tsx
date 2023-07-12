@@ -67,8 +67,8 @@ const Accommodation = () => {
         </div>
       </section>
       <div className={styles.dropdownWrapper}>
-        <Dropdown title="Description" content={<p>{description}</p>} />
-        <Dropdown title="Équipements" content={equipmentList()} />
+        <Dropdown title="Description" children={<p>{description}</p>} />
+        <Dropdown title="Équipements" children={equipmentList()} />
       </div>
     </div>
   );
