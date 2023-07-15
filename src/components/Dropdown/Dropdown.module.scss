@@ -2,8 +2,15 @@
 
 .dropdownContainer {
   cursor: pointer;
-  width: 58.2rem;
   margin-bottom: 2rem;
+}
+
+.dropdownContainerAbout {
+  width: 100%;
+}
+
+.dropdownContainerAccommodation {
+  width: 58.2rem;
 }
 
 .dropdownTitle {
@@ -11,12 +18,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 5.2rem;
-  padding: 0 2rem;
   background-color: $primary;
   color: $secondary;
-  font-size: 1.8rem;
   border-radius: 1rem;
+  padding: 0 2rem;
+}
+
+.dropdownTitleAccommodation {
+  height: 5.2rem;
+  font-size: 1.8remrem;
+}
+
+.dropdownTitleAbout {
+  height: 4.7rem;
+  font-size: 2.4rem;
 }
 
 .dropdownContent {
@@ -26,10 +41,19 @@
   margin: -1rem 0;
   padding: 4rem 2rem;
   color: $primary;
-  font-size: 1.8rem;
-  line-height: 2.55rem;
   background-color: $kasaGrey;
   border-radius: 0 0 1rem 1rem;
+  font-weight: 400;
+}
+
+.dropdownContentAbout {
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+}
+
+.dropdownContentAccommodation {
+  font-size: 1.8rem;
+  line-height: 2.55rem;
 }
 
 @media (max-width: 480px) {
@@ -43,6 +67,12 @@
   }
 
   .dropdownContent {
+    padding: 2rem 1rem;
+  }
+
+  .dropdownContentAbout {
+    font-size: 1.3rem;
     padding: 3rem 1rem;
+    line-height: 1.7rem;
   }
 }

@@ -1,14 +1,47 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import data from '../../data/data.json';
 import styles from './Accommodation.module.scss';
-import Tag from '../Tag/Tag';
-import StarRating from '../StarRating/StarRating';
-import Dropdown from '../Dropdown/Dropdown';
+import Tag from '../../components/Tag/Tag';
+import StarRating from '../../components/StarRating/StarRating';
+import Dropdown from '../../components/Dropdown/Dropdown';
+import { AccommodationData } from '../../types/accommodation.types';
+import Carousel from '../../components/Carousel/Carousel';
 
 const Accommodation = () => {
   const { id: idParams } = useParams();
-  const result = data.filter(d => d.id === idParams);
+  const navigate = useNavigate();
+
+  const [accommodation, setAccommodation] = useState<AccommodationData>({
+    id: '',
+    title: '',
+    cover: '',
+    pictures: [],
+    description: '',
+    host: {
+      name: '',
+      picture: '',
+    },
+    rating: '',
+    location: '',
+    equipments: [],
+    tags: [],
+  });
+
+  useEffect(() => {
+    if (data.length === 0) {
+      navigate('*');
+    } else {
+      const result = data.filter(d => d.id === idParams);
+      console.log(result);
+      if (result.length > 0) {
+        setAccommodation({ ...result[0] });
+      } else {
+        navigate('*');
+      }
+    }
+  }, [navigate, idParams]);
+
   const {
     id,
     title,
@@ -19,12 +52,12 @@ const Accommodation = () => {
     location,
     equipments,
     tags,
-  } = result[0];
+  }: AccommodationData = accommodation;
 
   const equipmentList = () => {
     return (
       <ul className={styles.equipmentList}>
-        {equipments.map((e, index) => (
+        {equipments?.map((e, index) => (
           <li key={`${index}-${e}`}>{e}</li>
         ))}
       </ul>
@@ -33,9 +66,7 @@ const Accommodation = () => {
 
   return (
     <div className={styles.accommondationContainer}>
-      <div className={styles.carousel}>
-        <h1>Carousel coming soon...</h1>
-      </div>
+      <Carousel images={pictures} />
       <section className={styles.infoSectionContainer}>
         <div className={styles.accommodationInfoContainer}>
           <div className={styles.titleWrapper}>
@@ -53,22 +84,30 @@ const Accommodation = () => {
             </div>
             <div className={styles.userAvatarNameContainer}>
               <div className={styles.nameWrapper}>
-                {host.name.split(' ').map(n => (
+                {host?.name.split(' ').map(n => (
                   <p key={`${id}-${n}`} className={styles.name}>
                     {n}
                   </p>
                 ))}
               </div>
               <div className={styles.avatar}>
-                <img src={host.picture} alt={`${host.name}-avatar`} />
+                <img src={host?.picture} alt={`${host?.name}-avatar`} />
               </div>
             </div>
           </div>
         </div>
       </section>
       <div className={styles.dropdownWrapper}>
-        <Dropdown title="Description" children={<p>{description}</p>} />
-        <Dropdown title="Équipements" children={equipmentList()} />
+        <Dropdown
+          title="Description"
+          children={<p className={styles.description}>{description}</p>}
+          context="accommodation-page"
+        />
+        <Dropdown
+          title="Équipements"
+          children={equipmentList()}
+          context="accommodation-page"
+        />
       </div>
     </div>
   );

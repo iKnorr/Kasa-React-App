@@ -6,41 +6,53 @@ import { ArrowDown } from '../Icons/Arrow/ArrowDown';
 interface DropdownProps {
   title: string;
   children: ReactNode;
-  width?: string;
-  height?: string;
-  fontSize?: string;
-  lineHeight?: string;
+  context?: string;
+  // width?: string;
+  // height?: string;
+  // fontSize?: string;
+  // lineHeight?: string;
 }
 
 const Dropdown = ({
   title,
   children,
-  width,
-  height,
-  fontSize,
-  lineHeight,
-}: DropdownProps) => {
+  context,
+}: // width,
+// height,
+// fontSize,
+// lineHeight,
+DropdownProps) => {
   const [show, setShow] = useState<boolean>(false);
 
   const handleClick = () => {
     setShow(!show);
   };
 
+  let titleStyles;
+  let contentStyles;
+  let containerStyles;
+
+  if (context === 'about-page') {
+    containerStyles = styles.dropdownContainerAbout;
+    titleStyles = styles.dropdownTitleAbout;
+    contentStyles = styles.dropdownContentAbout;
+  } else if (context === 'accommodation-page') {
+    containerStyles = styles.dropdownContainerAccommodation;
+    titleStyles = styles.dropdownTitleAccommodation;
+    contentStyles = styles.dropdownContentAccommodation;
+  }
+
   return (
     <div
-      className={styles.dropdownContainer}
+      className={`${styles.dropdownContainer} ${containerStyles}`}
       onClick={handleClick}
-      style={{ width: width, height: height }}
     >
-      <div className={styles.dropdownTitle}>
-        <span style={{ fontSize: fontSize }}>{title}</span>
+      <div className={`${styles.dropdownTitle} ${titleStyles}`}>
+        <span>{title}</span>
         {show ? <ArrowUp /> : <ArrowDown />}
       </div>
       {show && (
-        <div
-          className={styles.dropdownContent}
-          style={{ fontSize: fontSize, lineHeight: lineHeight }}
-        >
+        <div className={`${styles.dropdownContent} ${contentStyles}`}>
           {children}
         </div>
       )}

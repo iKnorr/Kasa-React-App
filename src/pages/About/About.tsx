@@ -14,9 +14,7 @@ const About = () => {
             key={key}
             title={value.title}
             children={value.text}
-            width="100%"
-            fontSize="2.4rem"
-            lineHeight="3.4rem"
+            context="about-page"
           />
         ))}
       </div>

@@ -1,0 +1,64 @@
+@import '../../variables';
+
+.carousel {
+  user-select: none;
+  position: relative;
+  height: 41.5rem;
+  border-radius: 2.5rem;
+
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 2.5rem;
+    object-fit: cover;
+  }
+}
+
+.indexIndicator {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  padding: 2rem;
+  font-size: 1.8rem;
+  color: $secondary;
+}
+
+.left,
+.right {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+
+  transition: all ease-in-out 0.3s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    height: 25.5rem;
+    border-radius: 1rem;
+
+    img {
+      border-radius: 1rem;
+    }
+  }
+
+  .indexIndicator {
+    visibility: hidden;
+  }
+}
