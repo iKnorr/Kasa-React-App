@@ -5,6 +5,9 @@
 }
 
 .infoSectionContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   margin: 3rem 0 3rem 0;
   color: $primary;
@@ -20,51 +23,11 @@
   font-size: 1.8rem;
 }
 
-.tags {
-  display: flex;
-  gap: 1rem;
-  margin: 3rem 0 0 0;
-  color: $secondary;
-}
-
-.accommodationInfoContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .userProfileRatingContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column-reverse;
-}
-
-.userAvatarNameContainer {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 3rem;
-
-  .nameWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
-  .name {
-    margin-bottom: 0.5rem;
-    font-size: 1.8rem;
-  }
-
-  .avatar {
-    margin-left: 1rem;
-    width: 6.4rem;
-  }
-
-  img {
-    width: 100%;
-    border-radius: 50%;
-  }
 }
 
 .ratingTagsContainer {
@@ -84,9 +47,6 @@
     list-style: none;
     font-weight: 400;
   }
-
-  .description {
-  }
 }
 
 @media (max-width: 480px) {
@@ -103,37 +63,16 @@
     font-size: 1.4rem;
   }
 
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 1rem 0;
-  }
   .infoSectionContainer {
-    margin: 1rem 0;
-  }
-
-  .accommodationInfoContainer {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .userAvatarNameContainer {
-    margin-bottom: unset;
+    margin: 1rem 0;
   }
 
   .userProfileRatingContainer {
     margin-top: 1rem;
     flex-direction: unset;
     width: 100%;
-
-    .name {
-      margin: unset;
-      font-size: 1.2rem;
-    }
-
-    .avatar {
-      width: 3.2rem;
-    }
   }
 
   .dropdownWrapper {

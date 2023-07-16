@@ -1,0 +1,16 @@
+@import '../../variables';
+
+.tags {
+  display: flex;
+  gap: 1rem;
+  margin: 3rem 0 0 0;
+  color: $secondary;
+}
+
+@media (max-width: 480px) {
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+  }
+}

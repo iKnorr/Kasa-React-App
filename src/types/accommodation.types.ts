@@ -1,4 +1,4 @@
-export type AccommodationData = {
+export interface AccommodationData {
   id: string;
   title: string;
   cover: string;
@@ -12,4 +12,4 @@ export type AccommodationData = {
   location: string;
   equipments: string[];
   tags: string[];
-};
+}

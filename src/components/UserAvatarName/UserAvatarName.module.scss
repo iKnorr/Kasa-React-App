@@ -1,0 +1,43 @@
+@import '../../variables';
+
+.userAvatarNameContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+
+  .nameWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .name {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+  }
+
+  .avatar {
+    margin-left: 1rem;
+    width: 6.4rem;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .userAvatarNameContainer {
+    margin-bottom: unset;
+
+    .name {
+      margin: unset;
+      font-size: 1.2rem;
+    }
+
+    .avatar {
+      width: 3.2rem;
+    }
+  }
+}

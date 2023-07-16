@@ -1,6 +1,7 @@
 import React from 'react';
 import { Star } from '../Icons/Stars/Star';
 import { StarInactive } from '../Icons/Stars/StarInactive';
+import styles from './StarRating.module.scss';
 
 interface RatingProps {
   rating?: string;
@@ -20,7 +21,7 @@ const StarRating = ({ rating }: RatingProps) => {
   }
 
   return (
-    <div style={{ display: 'flex', gap: '0.7rem' }}>
+    <div className={styles.ratingTagsContainer}>
       {stars.map((star, index) => (
         <div key={`${index}-${star}`}>{star}</div>
       ))}
