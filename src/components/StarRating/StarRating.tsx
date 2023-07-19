@@ -10,20 +10,14 @@ interface RatingProps {
 const StarRating = ({ rating }: RatingProps) => {
   const numRating = Number(rating);
 
-  const stars: JSX.Element[] = [];
-
-  for (let i = 0; i < 5; i++) {
-    if (i < numRating) {
-      stars.push(<Star />);
-    } else {
-      stars.push(<StarInactive />);
-    }
-  }
+  const stars = Array.from({ length: 5 }, (_, index) =>
+    index < numRating ? <Star /> : <StarInactive />
+  );
 
   return (
     <div className={styles.ratingTagsContainer}>
       {stars.map((star, index) => (
-        <div key={`${index}-${star}`}>{star}</div>
+        <div key={`star-${index}`}>{star}</div>
       ))}
     </div>
   );

@@ -7,21 +7,9 @@ interface DropdownProps {
   title: string;
   children: ReactNode;
   context?: string;
-  // width?: string;
-  // height?: string;
-  // fontSize?: string;
-  // lineHeight?: string;
 }
 
-const Dropdown = ({
-  title,
-  children,
-  context,
-}: // width,
-// height,
-// fontSize,
-// lineHeight,
-DropdownProps) => {
+const Dropdown = ({ title, children, context }: DropdownProps) => {
   const [show, setShow] = useState<boolean>(false);
 
   const handleClick = () => {

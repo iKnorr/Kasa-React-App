@@ -3,7 +3,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   height: 34rem;
   width: 100%;
   background-image: linear-gradient($primary, $darkPrimary);
