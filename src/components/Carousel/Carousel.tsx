@@ -9,7 +9,6 @@ interface CarouselProps {
 
 const Carousel = ({ images }: CarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  console.log(currentIndex);
 
   const handleNext = () => {
     setCurrentIndex(prevIndex =>
@@ -30,15 +29,19 @@ const Carousel = ({ images }: CarouselProps) => {
         src={images[currentIndex]}
         alt={`${currentIndex}-of-carousel`}
       />
-      <div className={styles.left} onClick={handlePrevious}>
-        <ArrowLeft />
-      </div>
-      <div className={styles.right} onClick={handleNext}>
-        <ArrowRight />
-      </div>
-      <span className={styles.indexIndicator}>{`${currentIndex + 1}/${
-        images.length
-      }`}</span>
+      {images.length > 1 && (
+        <>
+          <div className={styles.left} onClick={handlePrevious}>
+            <ArrowLeft />
+          </div>
+          <div className={styles.right} onClick={handleNext}>
+            <ArrowRight />
+          </div>
+          <span className={styles.indexIndicator}>{`${currentIndex + 1}/${
+            images.length
+          }`}</span>
+        </>
+      )}
     </div>
   );
 };

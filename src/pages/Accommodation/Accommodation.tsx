@@ -34,7 +34,6 @@ const Accommodation = () => {
       navigate('*');
     } else {
       const result = data.filter(d => d.id === idParams);
-      console.log(result);
       if (result.length > 0) {
         setAccommodation({ ...result[0] });
       } else {

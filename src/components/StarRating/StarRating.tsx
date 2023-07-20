@@ -16,7 +16,7 @@ const StarRating = ({ rating }: RatingProps) => {
 
   return (
     <div className={styles.ratingTagsContainer}>
-      {stars.map((star, index) => (
+      {stars?.map((star, index) => (
         <div key={`star-${index}`}>{star}</div>
       ))}
     </div>
