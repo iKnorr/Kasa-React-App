@@ -2,8 +2,19 @@
 
 .logo {
   height: 6.8rem;
+}
 
-  @media (max-width: 480px) {
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 5.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
     height: 4.7rem;
   }
 }

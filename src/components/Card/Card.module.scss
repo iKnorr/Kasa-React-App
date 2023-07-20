@@ -10,10 +10,6 @@
   border-radius: 1rem;
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.5);
 
-  @media (max-width: 480px) {
-    height: 25.5rem;
-  }
-
   p {
     padding: 1.5rem 2rem;
     color: $secondary;
@@ -29,4 +25,10 @@
 
 .link {
   text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    height: 25.5rem;
+  }
 }

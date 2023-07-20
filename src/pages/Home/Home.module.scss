@@ -7,13 +7,23 @@
   padding: 5.5rem;
   background-color: $kasaGrey;
   border-radius: 2.5rem;
+}
 
-  @media (max-width: 1024px) {
+@media (max-width: 1024px) {
+  .cardWrapper {
     grid-template-columns: 1fr 1fr;
+    padding: 3rem;
   }
+}
 
-  @media (max-width: 480px) {
+@media (max-width: 768px) {
+  .cardWrapper {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardWrapper {
     gap: 2rem;
     margin-bottom: 2rem;
     padding: unset;

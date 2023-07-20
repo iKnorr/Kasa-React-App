@@ -19,9 +19,18 @@
   &:last-of-type {
     margin-left: 8rem;
   }
+}
 
-  @media (max-width: 480px) {
-    font-size: 1.2rem;
+.active {
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+  .link {
+    font-size: 2rem;
 
     &:last-of-type {
       margin-left: 2rem;
@@ -29,6 +38,12 @@
   }
 }
 
-.active {
-  text-decoration: underline;
+@media (max-width: 480px) {
+  .link {
+    font-size: 1.2rem;
+
+    &:last-of-type {
+      margin-left: 2rem;
+    }
+  }
 }
