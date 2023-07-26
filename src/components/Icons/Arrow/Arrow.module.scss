@@ -8,6 +8,12 @@
   height: 8rem;
 }
 
+@media (max-width: 768px) {
+  .arrowCarousel {
+    height: 5rem;
+  }
+}
+
 @media (max-width: 480px) {
   .arrow {
     height: 0.8rem;

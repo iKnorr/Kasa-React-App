@@ -4,6 +4,18 @@
   margin: 4rem 10rem 3rem 10rem;
 }
 
+@media (max-width: 1024px) {
+  .dropdownContainer {
+    margin: unset;
+  }
+}
+
+@media (max-width: 768px) {
+  .dropdownContainer {
+    margin: unset;
+  }
+}
+
 @media (max-width: 480px) {
   .dropdownContainer {
     margin: unset;

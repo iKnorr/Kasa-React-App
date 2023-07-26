@@ -10,7 +10,7 @@
 }
 
 .dropdownContainerAccommodation {
-  width: 58.2rem;
+  width: 47%;
 }
 
 .dropdownTitle {
@@ -54,6 +54,12 @@
 .dropdownContentAccommodation {
   font-size: 1.8rem;
   line-height: 2.55rem;
+}
+
+@media (max-width: 768px) {
+  .dropdownContainer {
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {

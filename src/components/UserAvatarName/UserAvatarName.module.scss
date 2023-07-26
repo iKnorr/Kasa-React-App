@@ -27,6 +27,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .userAvatarNameContainer {
+    margin-bottom: unset;
+  }
+}
+
 @media (max-width: 480px) {
   .userAvatarNameContainer {
     margin-bottom: unset;

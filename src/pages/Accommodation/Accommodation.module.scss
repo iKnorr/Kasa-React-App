@@ -49,6 +49,39 @@
   }
 }
 
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+  .infoSectionContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1rem 0;
+  }
+
+  .userProfileRatingContainer {
+    margin-top: 1rem;
+    flex-direction: unset;
+    width: 100%;
+  }
+
+  .dropdownWrapper {
+    flex-direction: column;
+
+    .equipmentList {
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 2rem;
+    }
+
+    .description {
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 2rem;
+    }
+  }
+}
+
 @media (max-width: 480px) {
   .accommondationContainer {
     margin: 2rem 0 0 0;
